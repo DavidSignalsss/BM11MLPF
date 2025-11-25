@@ -11,7 +11,9 @@
 
 A professional analog-modeled low-pass filter plugin based on the classic Behringer BM-11M, developed with JUCE framework.
 
-![Plugin Interface](screenshots/interface.png)
+![Plugin Interface](screenshots/Captura_1.png)
+
+![Plugin Interface](screenshots/Captura_2.png)
 
 ## 🎛️ Features
 
