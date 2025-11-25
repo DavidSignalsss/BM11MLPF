@@ -38,14 +38,34 @@ A professional analog-modeled low-pass filter plugin based on the classic Behrin
 | **Mix** | 0-10 | Wet/Dry balance |
 | **Env Mode** | Bypass/Level | Envelope modulation toggle |
 
-## 🛠️ Development
+### Technical Architecture
+- **AudioProcessorValueTreeState**: Parameter management and automation
+- **dsp::LadderFilter**: JUCE's ladder filter for analog emulation
+- **dsp::Gain**: Drive stage implementation
+- **dsp::Compressor**: Envelope follower using compressor sidechain
+- **SmoothedValue**: Parameter smoothing for click-free transitions
 
-### Project Structure
-BM11MLPF/
-├── Source/
-│ ├── BM11MLPFAudioProcessor.h/cpp
-│ ├── BM11MLPFAudioProcessorEditor.h/cpp
-│ └── resources/
-├── Builds/
-│ └── MacOSX/ (Xcode project)
-└── BM11MLPF.jucer (Projucer file) EOF
+## 📋 Dependencies
+
+### Required
+- **JUCE 8.0.10** - Cross-platform C++ framework
+- **Xcode 14.0+** - macOS development environment
+- **macOS 11.0+** - Target operating system
+
+### Optional
+- **CMake 3.15+** - Alternative build system
+- **Projucer** - JUCE project management tool
+
+## 🔧 Compilation
+
+### System Requirements
+- macOS 11.0 or later
+- Xcode 14.0 or later
+- JUCE 8.0.10 framework
+
+### Build Steps
+
+1. **Clone Repository**
+   ```bash
+   git clone https://github.com/davidsignals/BM11MLPF.git
+   cd BM11MLPF
